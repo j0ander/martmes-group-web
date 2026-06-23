@@ -1,0 +1,35 @@
+/* ============================================
+   SECCIONES – sections.css
+   ============================================ */
+
+/* Identidad, Servicios, Equipo, Contacto, Footer */
+
+.bg-surface-container-lowest {
+  background-color: #ffffff;
+}
+
+.bg-surface-container-low {
+  background-color: #f3f3f4;
+}
+
+.border-outline-variant\/30 {
+  border-color: rgba(196, 198, 207, 0.3);
+}
+
+.hover-gold {
+  transition: all 0.3s ease;
+}
+
+/* Detalles (acordeón) */
+details summary::-webkit-details-marker {
+  display: none;
+}
+details summary {
+  list-style: none;
+  cursor: pointer;
+}
+
+/* Mapa simulado */
+.bg-\[#e5e5f7\] {
+  background-color: #e5e5f7;
+}

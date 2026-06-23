@@ -1,0 +1,51 @@
+/* ============================================
+   RESPONSIVE – responsive.css
+   ============================================ */
+
+/* Ajustes para móviles (además de las clases Tailwind) */
+
+@media (max-width: 768px) {
+  .px-margin-mobile {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .text-display-lg-mobile {
+    font-size: 32px;
+    line-height: 1.2;
+    font-weight: 700;
+  }
+
+  /* Ajustes de grid y espaciado */
+  .grid-cols-1 {
+    grid-template-columns: 1fr;
+  }
+
+  .gap-8 {
+    gap: 2rem;
+  }
+
+  /* Footer: columnas apiladas */
+  footer .grid {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .md\:grid-cols-2 {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .md\:grid-cols-3 {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+  .md\:grid-cols-4 {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+  .md\:flex {
+    display: flex;
+  }
+  .md\:hidden {
+    display: none;
+  }
+}

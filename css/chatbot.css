@@ -1,0 +1,38 @@
+/* ============================================
+   CHATBOT – chatbot.css
+   ============================================ */
+
+#chat-toggle {
+  width: 4rem;
+  height: 4rem;
+  background-color: #000613;
+  color: #ffffff;
+  border-radius: 9999px;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid rgba(115, 92, 0, 0.3);
+  transition: transform 0.2s ease;
+}
+#chat-toggle:hover {
+  transform: scale(1.1);
+}
+#chat-toggle:active {
+  transform: scale(0.95);
+}
+
+#chat-window {
+  width: 20rem;
+  background-color: #ffffff;
+  border-radius: 1rem;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+  border: 1px solid rgba(196, 198, 207, 0.3);
+  transition: all 0.3s ease;
+  transform: translateY(1rem);
+  opacity: 0;
+}
+#chat-window:not(.hidden) {
+  transform: translateY(0);
+  opacity: 1;
+}
