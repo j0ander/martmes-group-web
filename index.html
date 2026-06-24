@@ -1,13 +1,19 @@
 <!DOCTYPE html>
 <html class="scroll-smooth" lang="es">
+
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>MARTMES GROUP | Asesoría Integral</title>
 
   <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
-  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@400;500;600&display=swap"
+    rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"
+    rel="stylesheet" />
+  <!-- Font Awesome para el logo real de Facebook -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
 
   <!-- Estilos propios -->
   <link rel="stylesheet" href="css/style.css" />
@@ -16,7 +22,7 @@
   <link rel="stylesheet" href="css/sections.css" />
   <link rel="stylesheet" href="css/chatbot.css" />
   <link rel="stylesheet" href="css/responsive.css" />
-
+  <link rel="stylesheet" href="css/modal.css" />
   <!-- colores personalizados -->
   <script>
     tailwind.config = {
@@ -109,26 +115,24 @@
       }
     }
   </script>
+
 </head>
 
 <body class="bg-background text-on-surface font-body-md overflow-x-hidden">
 
-  <!-- ===== NAVBAR ===== -->
+  <!-- ===== NAVBAR (sin botón Agendar) ===== -->
   <nav class="fixed top-0 w-full z-50 bg-surface/80 backdrop-blur-md transition-all duration-300" id="navbar">
-    <div class="flex justify-between items-center w-full px-margin-mobile md:px-margin-desktop py-4 max-w-container-max mx-auto">
+    <div
+      class="flex justify-between items-center w-full px-margin-mobile md:px-margin-desktop py-4 max-w-container-max mx-auto">
       <div class="flex items-center gap-3">
-        <!-- Logo: usa la imagen desde assets/logo/logo.png -->
         <img alt="MARTMES GROUP Logo" class="h-10 w-auto" src="assets/logo/logo.png" />
         <span class="font-headline-md text-headline-md font-bold tracking-tight text-primary">MARTMES GROUP</span>
       </div>
       <!-- Desktop Nav -->
       <div class="hidden md:flex items-center gap-8">
-        <a class="text-on-surface font-medium hover:text-secondary transition-colors" href="#services">Services</a>
-        <a class="text-on-surface font-medium hover:text-secondary transition-colors" href="#team">Team</a>
-        <a class="text-on-surface font-medium hover:text-secondary transition-colors" href="#contact">Contact</a>
-        <button class="bg-primary text-on-primary px-6 py-2.5 rounded-xl font-label-md hover:bg-opacity-90 transition-all active:scale-95 border border-secondary/20">
-          Agendar una Consulta
-        </button>
+        <a class="text-on-surface font-medium hover:text-secondary transition-colors" href="#services">Servicios</a>
+        <a class="text-on-surface font-medium hover:text-secondary transition-colors" href="#team">Equipo</a>
+        <a class="text-on-surface font-medium hover:text-secondary transition-colors" href="#contact">Contacto</a>
       </div>
       <!-- Mobile Menu Toggle -->
       <button class="md:hidden text-primary" id="mobile-menu-btn">
@@ -149,10 +153,12 @@
         Asesoría integral para decisiones inteligentes. Elevamos el estándar de la consultoría legal y empresarial.
       </p>
       <div class="flex flex-col md:flex-row items-center justify-center gap-4">
-        <a class="w-full md:w-auto bg-secondary text-on-primary px-10 py-4 rounded-xl font-label-md hover:bg-secondary-container hover:text-on-secondary-container transition-all text-center" href="#services">
+        <a class="w-full md:w-auto bg-secondary text-on-primary px-10 py-4 rounded-xl font-label-md hover:bg-secondary-container hover:text-on-secondary-container transition-all text-center"
+          href="#services">
           Nuestros Servicios
         </a>
-        <a class="w-full md:w-auto border border-on-primary text-on-primary px-10 py-4 rounded-xl font-label-md hover:bg-on-primary hover:text-primary transition-all text-center" href="#contact">
+        <a class="w-full md:w-auto border border-on-primary text-on-primary px-10 py-4 rounded-xl font-label-md hover:bg-on-primary hover:text-primary transition-all text-center"
+          href="#contact">
           Contáctanos
         </a>
       </div>
@@ -167,128 +173,260 @@
     <div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
       <div class="text-center mb-20 reveal">
         <span class="font-label-md text-secondary uppercase tracking-[0.2em] block mb-4">Filosofía Corporativa</span>
-        <h2 class="font-headline-md text-headline-md text-primary">Nuestra Identidad Institucional</h2>
+        <h2 class="font-headline-md text-headline-md text-primary">Identidad Institucional</h2>
       </div>
       <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-        <!-- Mision -->
-        <div class="bg-surface-container-lowest p-10 rounded-xl border border-outline-variant/30 hover-gold transition-all reveal">
+        <!-- Misión -->
+        <div
+          class="bg-surface-container-lowest p-10 rounded-xl border border-outline-variant/30 hover-gold transition-all reveal">
           <div class="w-12 h-12 bg-secondary/10 flex items-center justify-center rounded-lg mb-8">
             <span class="material-symbols-outlined text-secondary">flag</span>
           </div>
           <h3 class="font-headline-sm text-headline-sm text-primary mb-4">Misión</h3>
           <p class="font-body-md text-on-surface-variant leading-relaxed">
-            Brindar soluciones estratégicas de excelencia en el ámbito legal y corporativo, transformando desafíos en oportunidades de crecimiento sostenible para nuestros aliados.
+            Brindar asesoría integral y soluciones estratégicas que permitan a empresas, instituciones y personas tomar
+            decisiones inteligentes, seguras y sostenibles, mediante servicios especializados de consultoría
+            empresarial, asesoría legal, gestión inmobiliaria, desarrollo de proyectos y asistencia técnica, generando
+            valor, confianza y crecimiento para nuestros clientes.
           </p>
         </div>
-        <!-- Vision -->
-        <div class="bg-surface-container-lowest p-10 rounded-xl border border-outline-variant/30 hover-gold transition-all reveal">
+        <!-- Visión -->
+        <div
+          class="bg-surface-container-lowest p-10 rounded-xl border border-outline-variant/30 hover-gold transition-all reveal">
           <div class="w-12 h-12 bg-secondary/10 flex items-center justify-center rounded-lg mb-8">
             <span class="material-symbols-outlined text-secondary">visibility</span>
           </div>
           <h3 class="font-headline-sm text-headline-sm text-primary mb-4">Visión</h3>
           <p class="font-body-md text-on-surface-variant leading-relaxed">
-            Ser referentes internacionales en asesoría integral, reconocidos por nuestra innovación, ética inquebrantable y capacidad de anticipar las necesidades del mercado global.
+            Ser una firma empresarial líder a nivel nacional, reconocida por su capacidad de integrar conocimiento,
+            innovación y experiencia multidisciplinaria para ofrecer soluciones efectivas que impulsen el desarrollo
+            organizacional, la seguridad jurídica y el crecimiento sostenible de nuestros clientes.
           </p>
         </div>
         <!-- Valores -->
-        <div class="bg-surface-container-lowest p-10 rounded-xl border border-outline-variant/30 hover-gold transition-all reveal">
+        <div
+          class="bg-surface-container-lowest p-10 rounded-xl border border-outline-variant/30 hover-gold transition-all reveal">
           <div class="w-12 h-12 bg-secondary/10 flex items-center justify-center rounded-lg mb-8">
             <span class="material-symbols-outlined text-secondary">star</span>
           </div>
           <h3 class="font-headline-sm text-headline-sm text-primary mb-4">Valores</h3>
           <ul class="space-y-3 font-body-md text-on-surface-variant">
-            <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-secondary"></span> Integridad &amp; Ética</li>
-            <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-secondary"></span> Excelencia Analítica</li>
-            <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-secondary"></span> Compromiso Cliente</li>
-            <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-secondary"></span> Innovación Estratégica</li>
+            <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-secondary"></span> Honestidad y
+              Transparencia</li>
+            <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-secondary"></span> Compromiso
+            </li>
+            <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-secondary"></span> Orientación
+              al Cliente</li>
+            <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-secondary"></span> Confianza
+            </li>
+            <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+              Responsabilidad</li>
+            <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-secondary"></span> Ética
+              Profesional</li>
           </ul>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- ===== SERVICES ===== -->
+  <!-- ===== SERVICIOS (GIROS DE NEGOCIO) ===== -->
   <section class="py-24 md:py-40 bg-white" id="services">
+    <style>
+      /* Animaciones para las tarjetas de servicios */
+      .slide-left,
+      .slide-right {
+        opacity: 0;
+        transition: all 0.8s cubic-bezier(0.22, 1, 0.36, 1);
+        will-change: transform, opacity;
+      }
+
+      .slide-left {
+        transform: translateX(-60px);
+      }
+
+      .slide-right {
+        transform: translateX(60px);
+      }
+
+      .slide-visible {
+        opacity: 1;
+        transform: translateX(0) !important;
+      }
+    </style>
+
     <div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
       <div class="flex flex-col md:flex-row justify-between items-end mb-16 gap-8 reveal">
         <div class="max-w-2xl">
-          <span class="font-label-md text-secondary uppercase tracking-[0.2em] block mb-4">Experticia</span>
-          <h2 class="font-headline-md text-headline-md text-primary">Soluciones Transversales para Desafíos Complejos</h2>
+          <span class="font-label-md text-secondary uppercase tracking-[0.2em] block mb-4">Giros de Negocio</span>
+          <h2 class="font-headline-md text-headline-md text-primary">Soluciones Integrales para Cada Necesidad</h2>
         </div>
         <div class="text-on-surface-variant text-right hidden md:block">
-          <p class="max-w-xs">Estrategia diseñada a la medida de los objetivos más ambiciosos.</p>
+          <p class="max-w-xs">Estrategia y respaldo legal para empresas, instituciones y personas.</p>
         </div>
       </div>
+
       <div class="grid grid-cols-1 gap-12">
 
-        <!-- Service 1 -->
-        <div class="group relative bg-surface-container-low rounded-xl overflow-hidden border border-outline-variant/20 reveal">
+        <!-- Servicio 1: Asesoría Jurídica -->
+        <div
+          class="slide-left group relative bg-surface-container-low rounded-xl overflow-hidden border border-outline-variant/20">
           <div class="grid grid-cols-1 md:grid-cols-2">
             <div class="p-12 flex flex-col justify-center">
               <span class="material-symbols-outlined text-secondary text-4xl mb-6">gavel</span>
               <h3 class="font-headline-md text-headline-md text-primary mb-6">Asesoría Jurídica</h3>
-              <p class="font-body-lg text-on-surface-variant mb-8">Defensa técnica y consultoría legal de alto nivel, especializada en derecho comercial, civil y administrativo.</p>
-              <details class="group/list">
-                <summary class="list-none cursor-pointer text-secondary font-label-md flex items-center gap-2 hover:underline">
-                  VER DETALLES <span class="material-symbols-outlined transition-transform group-open/list:rotate-180">expand_more</span>
-                </summary>
-                <ul class="mt-6 space-y-4 font-body-md text-on-surface-variant border-t border-outline-variant pt-6">
-                  <li class="flex items-start gap-3"><span class="material-symbols-outlined text-secondary text-sm mt-1">check_circle</span> Litigios y resolución de conflictos complejos</li>
-                  <li class="flex items-start gap-3"><span class="material-symbols-outlined text-secondary text-sm mt-1">check_circle</span> Derecho corporativo y estructuración legal</li>
-                  <li class="flex items-start gap-3"><span class="material-symbols-outlined text-secondary text-sm mt-1">check_circle</span> Contratación pública y privada</li>
-                </ul>
-              </details>
+
+              <!-- Botón y contenedor colapsable -->
+              <div class="servicio-detalle">
+                <button class="detalle-toggle text-secondary font-label-md flex items-center gap-2 hover:underline">
+                  VER DETALLES <span
+                    class="material-symbols-outlined transition-transform duration-300">expand_more</span>
+                </button>
+                <div class="detalle-contenido overflow-hidden transition-all duration-500 ease-in-out"
+                  style="max-height: 0; opacity: 0;">
+                  <div class="mt-6 space-y-4 font-body-md text-on-surface-variant border-t border-outline-variant pt-6">
+                    <div>
+                      <h4 class="font-label-md text-primary">Derecho civil y sucesiones</h4>
+                      <ul class="list-disc pl-6 space-y-1">
+                        <li>Adjudicación y legalización de tierras</li>
+                        <li>Divisiones y particiones</li>
+                        <li>Actualización y rectificación catastral</li>
+                        <li>Cabidas y excedentes</li>
+                        <li>Traspaso de dominio por compraventa, donación, herencia y testamento</li>
+                      </ul>
+                    </div>
+                    <div>
+                      <h4 class="font-label-md text-primary">Recuperación de Cartera y Cobro de Deudas</h4>
+                      <ul class="list-disc pl-6 space-y-1">
+                        <li>Cobro extrajudicial y judicial</li>
+                        <li>Negociación de obligaciones</li>
+                      </ul>
+                    </div>
+                    <div>
+                      <h4 class="font-label-md text-primary">Derecho de Familia</h4>
+                      <ul class="list-disc pl-6 space-y-1">
+                        <li>Divorcios</li>
+                        <li>Pensiones alimenticias</li>
+                        <li>Tenencia y régimen de visitas</li>
+                        <li>Patria potestad</li>
+                        <li>Adopciones</li>
+                      </ul>
+                    </div>
+                    <div>
+                      <h4 class="font-label-md text-primary">Defensa de Derechos y Litigio Constitucional</h4>
+                      <ul class="list-disc pl-6 space-y-1">
+                        <li>Asesoría en derechos humanos y defensa internacional frente a vulneraciones de derechos
+                          constitucionales</li>
+                        <li>Acciones de protección</li>
+                        <li>Garantías jurisdiccionales</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
             <div class="h-64 md:h-full overflow-hidden">
-              <img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" alt="Asesoría Jurídica" src="assets/images/servicio-legal.png" />
+              <img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+                alt="Asesoría Jurídica" src="assets/images/servicio-legal.png" />
             </div>
           </div>
         </div>
 
-        <!-- Service 2 -->
-        <div class="group relative bg-surface-container-low rounded-xl overflow-hidden border border-outline-variant/20 reveal">
+        <!-- Servicio 2: Consultoría Empresarial (entra desde derecha) -->
+        <div
+          class="slide-right group relative bg-surface-container-low rounded-xl overflow-hidden border border-outline-variant/20">
           <div class="grid grid-cols-1 md:grid-cols-2">
             <div class="h-64 md:h-full order-2 md:order-1 overflow-hidden">
-              <img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" alt="Consultoría Empresarial" src="assets/images/servicio-empresa.png" />
+              <img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+                alt="Consultoría Empresarial" src="assets/images/servicio-empresa.png" />
             </div>
             <div class="p-12 flex flex-col justify-center order-1 md:order-2">
               <span class="material-symbols-outlined text-secondary text-4xl mb-6">insights</span>
               <h3 class="font-headline-md text-headline-md text-primary mb-6">Consultoría Empresarial</h3>
-              <p class="font-body-lg text-on-surface-variant mb-8">Transformamos el ADN de su organización para optimizar procesos y potenciar la rentabilidad en mercados competitivos.</p>
-              <details class="group/list">
-                <summary class="list-none cursor-pointer text-secondary font-label-md flex items-center gap-2 hover:underline">
-                  VER DETALLES <span class="material-symbols-outlined transition-transform group-open/list:rotate-180">expand_more</span>
-                </summary>
-                <ul class="mt-6 space-y-4 font-body-md text-on-surface-variant border-t border-outline-variant pt-6">
-                  <li class="flex items-start gap-3"><span class="material-symbols-outlined text-secondary text-sm mt-1">check_circle</span> Reestructuración organizacional y operativa</li>
-                  <li class="flex items-start gap-3"><span class="material-symbols-outlined text-secondary text-sm mt-1">check_circle</span> Análisis de mercado y posicionamiento estratégico</li>
-                  <li class="flex items-start gap-3"><span class="material-symbols-outlined text-secondary text-sm mt-1">check_circle</span> Gestión de riesgos corporativos</li>
-                </ul>
-              </details>
+
+              <!-- Botón y contenedor colapsable -->
+              <div class="servicio-detalle">
+                <button class="detalle-toggle text-secondary font-label-md flex items-center gap-2 hover:underline">
+                  VER DETALLES <span
+                    class="material-symbols-outlined transition-transform duration-300">expand_more</span>
+                </button>
+                <div class="detalle-contenido overflow-hidden transition-all duration-500 ease-in-out"
+                  style="max-height: 0; opacity: 0;">
+                  <ul
+                    class="mt-6 space-y-2 font-body-md text-on-surface-variant border-t border-outline-variant pt-6 list-disc pl-6">
+                    <li>Constitución y legalización de empresas</li>
+                    <li>Registro de marcas y propiedad intelectual</li>
+                    <li>Organización y fortalecimiento institucional</li>
+                    <li>Protección de datos personales</li>
+                    <li>Planificación estratégica y de marketing</li>
+                    <li>Desarrollo de productos y servicios</li>
+                    <li>Marketing digital y redes sociales</li>
+                  </ul>
+                </div>
+              </div>
             </div>
           </div>
         </div>
 
-        <!-- Service 3 -->
-        <div class="group relative bg-surface-container-low rounded-xl overflow-hidden border border-outline-variant/20 reveal">
+        <!-- Servicio 3: Gestión Inmobiliaria (entra desde izquierda) -->
+        <div
+          class="slide-left group relative bg-surface-container-low rounded-xl overflow-hidden border border-outline-variant/20">
           <div class="grid grid-cols-1 md:grid-cols-2">
             <div class="p-12 flex flex-col justify-center">
               <span class="material-symbols-outlined text-secondary text-4xl mb-6">apartment</span>
-              <h3 class="font-headline-md text-headline-md text-primary mb-6">Gestión Inmobiliaria</h3>
-              <p class="font-body-lg text-on-surface-variant mb-8">Administración estratégica de activos y estructuración de proyectos especializados con enfoque en plusvalía.</p>
-              <details class="group/list">
-                <summary class="list-none cursor-pointer text-secondary font-label-md flex items-center gap-2 hover:underline">
-                  VER DETALLES <span class="material-symbols-outlined transition-transform group-open/list:rotate-180">expand_more</span>
-                </summary>
-                <ul class="mt-6 space-y-4 font-body-md text-on-surface-variant border-t border-outline-variant pt-6">
-                  <li class="flex items-start gap-3"><span class="material-symbols-outlined text-secondary text-sm mt-1">check_circle</span> Gerencia de proyectos de infraestructura</li>
-                  <li class="flex items-start gap-3"><span class="material-symbols-outlined text-secondary text-sm mt-1">check_circle</span> Auditoría inmobiliaria y legal de predios</li>
-                  <li class="flex items-start gap-3"><span class="material-symbols-outlined text-secondary text-sm mt-1">check_circle</span> Inversión en activos de alto rendimiento</li>
-                </ul>
-              </details>
+              <h3 class="font-headline-md text-headline-md text-primary mb-6">Gestión Inmobiliaria y Proyectos
+                Especializados</h3>
+
+              <!-- Botón y contenedor colapsable -->
+              <div class="servicio-detalle">
+                <button class="detalle-toggle text-secondary font-label-md flex items-center gap-2 hover:underline">
+                  VER DETALLES <span
+                    class="material-symbols-outlined transition-transform duration-300">expand_more</span>
+                </button>
+                <div class="detalle-contenido overflow-hidden transition-all duration-500 ease-in-out"
+                  style="max-height: 0; opacity: 0;">
+                  <div class="mt-6 space-y-4 font-body-md text-on-surface-variant border-t border-outline-variant pt-6">
+                    <div>
+                      <h4 class="font-label-md text-primary">Gestión y Comercialización Inmobiliaria</h4>
+                      <ul class="list-disc pl-6 space-y-1">
+                        <li>Correctaje e intermediación inmobiliaria</li>
+                      </ul>
+                    </div>
+                    <div>
+                      <h4 class="font-label-md text-primary">Desarrollo y Estructuración de Proyectos</h4>
+                      <ul class="list-disc pl-6 space-y-1">
+                        <li>Proyectos de lotización y urbanización</li>
+                        <li>Conjuntos habitacionales</li>
+                        <li>Estudios de factibilidad y viabilidad de proyectos</li>
+                      </ul>
+                    </div>
+                    <div>
+                      <h4 class="font-label-md text-primary">Diseño y Construcción</h4>
+                      <ul class="list-disc pl-6 space-y-1">
+                        <li>Planificación y gestión de proyectos de construcción</li>
+                        <li>Viviendas unifamiliares y multifamiliares</li>
+                        <li>Edificios residenciales y comerciales</li>
+                        <li>Clínicas, consultorios y establecimientos especializados</li>
+                        <li>Remodelaciones, ampliaciones y adecuaciones de infraestructura</li>
+                      </ul>
+                    </div>
+                    <div>
+                      <h4 class="font-label-md text-primary">Consultorías Técnicas Especializadas</h4>
+                      <ul class="list-disc pl-6 space-y-1">
+                        <li>Arquitectura y diseño arquitectónico</li>
+                        <li>Topografía y levantamientos planimétricos</li>
+                        <li>Regularización técnica de inmuebles</li>
+                        <li>Gestión de permisos y trámites municipales</li>
+                        <li>Líneas de fábrica y permiso de construcción</li>
+                        <li>División y Subdivisión</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
             <div class="h-64 md:h-full overflow-hidden">
-              <img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" alt="Gestión Inmobiliaria" src="assets/images/servicio-inmobiliario.png" />
+              <img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+                alt="Gestión Inmobiliaria" src="assets/images/servicio-inmobiliario.png" />
             </div>
           </div>
         </div>
@@ -296,44 +434,138 @@
     </div>
   </section>
 
-  <!-- ===== TEAM ===== -->
-  <section class="py-24 md:py-40 bg-surface" id="team">
+  <!-- ===== TEAM  ===== -->
+  <section class="py-12 md:py-24 bg-surface" id="team">
     <div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
-      <div class="text-center mb-20 reveal">
+      <div class="text-center mb-12 reveal">
         <span class="font-label-md text-secondary uppercase tracking-[0.2em] block mb-4">Liderazgo</span>
         <h2 class="font-headline-md text-headline-md text-primary">Nuestro Equipo Directivo</h2>
       </div>
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-12 max-w-5xl mx-auto">
-        <!-- Team 1 -->
-        <div class="group bg-surface-container-lowest rounded-xl overflow-hidden border border-outline-variant/30 hover:border-secondary transition-all reveal">
-          <div class="relative overflow-hidden h-[400px]">
-            <img alt="Dra. Elena Martínez" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" src="assets/team/team-1.jpg" />
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+
+        <!-- Miembro 1: Edison Mesías -->
+        <div
+          class="team-card bg-surface-container-lowest rounded-xl overflow-hidden border border-outline-variant/30 hover:border-secondary transition-all reveal">
+          <div class="card-preview p-8">
+            <div class="relative overflow-hidden h-64 rounded-lg mb-4">
+              <img alt="Ing. Edison Mesías, Mtr." class="w-full h-full object-cover" src="assets/team/team-1.jpg" />
+            </div>
+            <h3 class="font-headline-sm text-headline-sm text-primary mb-1">Ing. Edison Mesías, Mtr.</h3>
+            <p class="font-label-md text-secondary mb-3">Director de Marketing y Estrategia</p>
+            <p class="font-body-md text-on-surface-variant line-clamp-3">
+              Profesional con más de 11 años de experiencia en los sectores público y privado, desempeñando funciones
+              estratégicas en las áreas de marketing, administración y gestión empresarial.
+            </p>
+            <button class="ver-mas mt-4 text-secondary font-label-md hover:underline flex items-center gap-1"
+              data-member="1">
+              Ver más <span class="material-symbols-outlined text-sm">expand_more</span>
+            </button>
           </div>
-          <div class="p-8">
-            <h3 class="font-headline-sm text-headline-sm text-primary mb-1">Dra. Elena Martínez</h3>
-            <p class="font-label-md text-secondary mb-4">Directora Jurídica &amp; Socia Fundadora</p>
-            <p class="font-body-md text-on-surface-variant mb-6">Experta en derecho corporativo con más de 20 años de trayectoria asesorando firmas multinacionales.</p>
-            <a class="inline-flex items-center gap-2 text-primary font-medium hover:text-secondary transition-colors" href="mailto:e.martinez@martmesgroup.com">
-              <span class="material-symbols-outlined">mail</span>
-              e.martinez@martmesgroup.com
-            </a>
+          <!-- Contenido completo (oculto, se clonará para el modal) -->
+          <div class="card-expanded hidden">
+            <div class="expanded-data">
+              <img alt="Ing. Edison Mesías, Mtr." class="w-full h-full object-cover" src="assets/team/team-1.jpg" />
+              <div>
+                <h3 class="font-headline-sm text-headline-sm text-primary mb-1">Ing. Edison Mesías, Mtr.</h3>
+                <p class="font-label-md text-secondary mb-3">Director de Marketing y Estrategia</p>
+                <div class="font-body-md text-on-surface-variant space-y-3">
+                  <p><strong>Máster Universitario en Dirección de Marketing</strong><br />
+                    <strong>Máster en Dirección Estratégica, Especialidad en Gerencia</strong>
+                  </p>
+                  <p>Profesional con más de 11 años de experiencia en los sectores público y privado, desempeñando
+                    funciones estratégicas en las áreas de marketing, administración y gestión empresarial. Mi
+                    experiencia me ha permitido liderar procesos, optimizar recursos y desarrollar estrategias enfocadas
+                    en el cumplimiento de objetivos y la mejora continua de las organizaciones.</p>
+                  <p><strong>Contacto:</strong> <a href="mailto:gerencia@martmes.com"
+                      class="text-primary hover:text-secondary">gerencia@martmes.com</a></p>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
-        <!-- Team 2 -->
-        <div class="group bg-surface-container-lowest rounded-xl overflow-hidden border border-outline-variant/30 hover:border-secondary transition-all reveal">
-          <div class="relative overflow-hidden h-[400px]">
-            <img alt="Dr. Ricardo Mesas" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" src="assets/team/team-2.jpg" />
+
+        <!-- Miembro 2: Karina Martínez -->
+        <div
+          class="team-card bg-surface-container-lowest rounded-xl overflow-hidden border border-outline-variant/30 hover:border-secondary transition-all reveal">
+          <div class="card-preview p-8">
+            <div class="relative overflow-hidden h-64 rounded-lg mb-4">
+              <img alt="Av. Karina Martínez, Mtr." class="w-full h-full object-cover" src="assets/team/team-2.jpg" />
+            </div>
+            <h3 class="font-headline-sm text-headline-sm text-primary mb-1">Av. Karina Martínez, Mtr.</h3>
+            <p class="font-label-md text-secondary mb-3">Directora Legal y de Protección de Datos</p>
+            <p class="font-body-md text-on-surface-variant line-clamp-3">
+              Master en Derechos Humanos y Sistemas Internacionales de protección, Especialista en Derecho
+              Administrativo. Con amplia experiencia en el sector público y privado.
+            </p>
+            <button class="ver-mas mt-4 text-secondary font-label-md hover:underline flex items-center gap-1"
+              data-member="2">
+              Ver más <span class="material-symbols-outlined text-sm">expand_more</span>
+            </button>
           </div>
-          <div class="p-8">
-            <h3 class="font-headline-sm text-headline-sm text-primary mb-1">Dr. Ricardo Mesas</h3>
-            <p class="font-label-md text-secondary mb-4">Director Estratégico de Consultoría</p>
-            <p class="font-body-md text-on-surface-variant mb-6">Estratega empresarial con enfoque en optimización financiera y crecimiento sostenible a largo plazo.</p>
-            <a class="inline-flex items-center gap-2 text-primary font-medium hover:text-secondary transition-colors" href="mailto:r.mesas@martmesgroup.com">
-              <span class="material-symbols-outlined">mail</span>
-              r.mesas@martmesgroup.com
-            </a>
+          <div class="card-expanded hidden">
+            <div class="expanded-data">
+              <img alt="Av. Karina Martínez, Mtr." class="w-full h-full object-cover" src="assets/team/team-2.jpg" />
+              <div>
+                <h3 class="font-headline-sm text-headline-sm text-primary mb-1">Av. Karina Martínez, Mtr.</h3>
+                <p class="font-label-md text-secondary mb-3">Directora Legal y de Protección de Datos</p>
+                <div class="font-body-md text-on-surface-variant space-y-3">
+                  <p><strong>Master en Derechos Humanos y Sistemas Internacionales de protección</strong><br />
+                    <strong>Especialista en Derecho Administrativo</strong>
+                  </p>
+                  <p>Cuenta con certificaciones en Leadership por la Universidad Internacional de Miami (MIU) y como
+                    Delegada de Protección de Datos Personales. Posee amplia experiencia en el sector público y privado,
+                    habiendo desempeñado cargos de alta responsabilidad como Procuradora Zonal del SRI, Coordinadora
+                    Jurídica del Registro Civil, Secretaria Ejecutiva del Consejo Cantonal de la Niñez y Adolescencia de
+                    Baños de Agua Santa y Asesora Nacional de Políticas Públicas del Consejo de la Niñez y Adolescencia.
+                    Actualmente brinda asesoría legal y consultoría empresarial especializada para personas, empresas e
+                    instituciones.</p>
+                  <p><strong>Contacto:</strong> <a href="mailto:legal@martmes.com"
+                      class="text-primary hover:text-secondary">legal@martmes.com</a></p>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
+
+        <!-- Miembro 3: Pablo Acurio -->
+        <div
+          class="team-card bg-surface-container-lowest rounded-xl overflow-hidden border border-outline-variant/30 hover:border-secondary transition-all reveal">
+          <div class="card-preview p-8">
+            <div class="relative overflow-hidden h-64 rounded-lg mb-4">
+              <img alt="Av. Pablo Acurio, Mgt." class="w-full h-full object-cover" src="assets/team/team-3.jpg" />
+            </div>
+            <h3 class="font-headline-sm text-headline-sm text-primary mb-1">Av. Pablo Acurio, Mgt.</h3>
+            <p class="font-label-md text-secondary mb-3">Director de Litigios y Derecho Civil</p>
+            <p class="font-body-md text-on-surface-variant line-clamp-3">
+              Magíster en Derecho Civil y Procesal Civil. Especialista en diseño de estrategias litigiosas bajo el
+              COGEP.
+            </p>
+            <button class="ver-mas mt-4 text-secondary font-label-md hover:underline flex items-center gap-1"
+              data-member="3">
+              Ver más <span class="material-symbols-outlined text-sm">expand_more</span>
+            </button>
+          </div>
+          <div class="card-expanded hidden">
+            <div class="expanded-data">
+              <img alt="Av. Pablo Acurio, Mgt." class="w-full h-full object-cover" src="assets/team/team-3.jpg" />
+              <div>
+                <h3 class="font-headline-sm text-headline-sm text-primary mb-1">Av. Pablo Acurio, Mgt.</h3>
+                <p class="font-label-md text-secondary mb-3">Director de Litigios y Derecho Civil</p>
+                <div class="font-body-md text-on-surface-variant space-y-3">
+                  <p><strong>Magíster en Derecho Civil y Procesal Civil.</strong></p>
+                  <p>Profesional de la abogacía con una sólida trayectoria en el patrocinio legal y la consultoría
+                    estratégica. Especialista en el diseño de estrategias litigiosas bajo el COGEP, con amplios
+                    conocimientos en derecho de familia y derecho notarial. Destaco por mi rigurosidad técnica en la
+                    estructuración de contratos, escrituras públicas y la resolución efectiva de conflictos,
+                    garantizando siempre la máxima seguridad jurídica y excelencia en el servicio legal.</p>
+                  <p><strong>Contacto:</strong> <a href="mailto:legal@martmes.com"
+                      class="text-primary hover:text-secondary">legal@martmes.com</a></p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
       </div>
     </div>
   </section>
@@ -341,14 +573,16 @@
   <!-- ===== CORPORATE STATEMENT ===== -->
   <section class="py-20 bg-primary text-on-primary">
     <div class="max-w-4xl mx-auto px-margin-mobile text-center reveal">
-      <h2 class="font-headline-sm text-headline-sm mb-6">Respaldo Institucional</h2>
       <p class="font-body-lg text-body-lg opacity-80 leading-relaxed italic">
-        "MARTMES S.A.S. es una compañía legalmente constituida bajo las leyes vigentes, operando con los más altos estándares de transparencia y cumplimiento normativo para garantizar la seguridad jurídica de cada una de nuestras gestiones."
+        MARTMES S.A.S. es una compañía legalmente constituida y registrada ante la Superintendencia de Compañías bajo el
+        No. 399216, e inscrita en el Servicio de Rentas Internas (SRI) con RUC No. 1891813560001. Nuestra organización
+        ofrece soluciones integrales en las áreas legal, empresarial, protección de datos personales y consultoría
+        técnica, respaldadas por principios de ética, profesionalismo y excelencia.
       </p>
     </div>
   </section>
 
-  <!-- ===== CONTACT ===== -->
+  <!-- ===== CONTACT & REDES SOCIALES ===== -->
   <section class="py-24 md:py-40 bg-white" id="contact">
     <div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
       <div class="grid grid-cols-1 lg:grid-cols-2 gap-20">
@@ -357,113 +591,135 @@
           <h2 class="font-headline-md text-headline-md text-primary mb-12">Estamos listos para conversar</h2>
           <div class="space-y-8">
             <div class="flex items-start gap-6">
-              <div class="w-12 h-12 flex-shrink-0 bg-surface-container flex items-center justify-center rounded-lg text-secondary">
+              <div
+                class="w-12 h-12 flex-shrink-0 bg-surface-container flex items-center justify-center rounded-lg text-secondary">
                 <span class="material-symbols-outlined">location_on</span>
               </div>
               <div>
                 <h4 class="font-label-md text-primary mb-1">Dirección</h4>
-                <p class="font-body-md text-on-surface-variant">Edificio Platinum Tower, Suite 405<br />Bogotá, Colombia</p>
+                <p class="font-body-md text-on-surface-variant">
+                  Av. Pedro Fermin Cevallos y Juan León Mera, edificio Mutualista Ambato, 3er piso, Oficina 303, Código
+                  postal 180101<br />
+                  <a href="https://maps.app.goo.gl/kczdhuBQiFv9vcXc9" target="_blank"
+                    class="text-primary hover:text-secondary">Ver en Google Maps</a>
+                </p>
               </div>
             </div>
             <div class="flex items-start gap-6">
-              <div class="w-12 h-12 flex-shrink-0 bg-surface-container flex items-center justify-center rounded-lg text-secondary">
+              <div
+                class="w-12 h-12 flex-shrink-0 bg-surface-container flex items-center justify-center rounded-lg text-secondary">
                 <span class="material-symbols-outlined">call</span>
               </div>
               <div>
                 <h4 class="font-label-md text-primary mb-1">Teléfono</h4>
-                <p class="font-body-md text-on-surface-variant">+57 1 234 5678</p>
+                <p class="font-body-md text-on-surface-variant">0997392987</p>
               </div>
             </div>
             <div class="flex items-start gap-6">
-              <div class="w-12 h-12 flex-shrink-0 bg-surface-container flex items-center justify-center rounded-lg text-secondary">
+              <div
+                class="w-12 h-12 flex-shrink-0 bg-surface-container flex items-center justify-center rounded-lg text-secondary">
                 <span class="material-symbols-outlined">chat</span>
               </div>
               <div>
                 <h4 class="font-label-md text-primary mb-1">WhatsApp</h4>
-                <p class="font-body-md text-on-surface-variant">+57 300 000 0000</p>
+                <p class="font-body-md text-on-surface-variant">
+                  <a href="https://wa.me/593997392987" target="_blank"
+                    class="text-primary hover:text-secondary">https://wa.me/593997392987</a>
+                </p>
               </div>
             </div>
             <div class="flex items-start gap-6">
-              <div class="w-12 h-12 flex-shrink-0 bg-surface-container flex items-center justify-center rounded-lg text-secondary">
-                <span class="material-symbols-outlined">receipt_long</span>
+              <div
+                class="w-12 h-12 flex-shrink-0 bg-surface-container flex items-center justify-center rounded-lg text-secondary">
+                <span class="material-symbols-outlined">email</span>
               </div>
               <div>
-                <h4 class="font-label-md text-primary mb-1">Facturación</h4>
-                <p class="font-body-md text-on-surface-variant">facturacion@martmesgroup.com</p>
+                <h4 class="font-label-md text-primary mb-1">Correo Electrónico</h4>
+                <p class="font-body-md text-on-surface-variant">
+                  <a href="mailto:info@martmes.com" class="text-primary hover:text-secondary">info@martmes.com</a><br />
+                  <span class="text-sm">Facturación: <a href="mailto:facturacion@martmes.com"
+                      class="text-primary hover:text-secondary">facturacion@martmes.com</a></span>
+                </p>
               </div>
             </div>
           </div>
         </div>
         <div class="reveal">
-          <div class="h-full min-h-[400px] bg-surface-container rounded-xl overflow-hidden border border-outline-variant/30 relative">
-            <!-- Mapa simulado -->
-            <div class="absolute inset-0 bg-[#e5e5f7]" style="background-image: linear-gradient(#d1d1d1 1.2px, transparent 1.2px), linear-gradient(90deg, #d1d1d1 1.2px, transparent 1.2px); background-size: 24px 24px;"></div>
+          <!-- Mapa clickable: ahora es un enlace a Google Maps -->
+          <a href="https://maps.app.goo.gl/kczdhuBQiFv9vcXc9" target="_blank"
+            class="block h-full min-h-[400px] bg-surface-container rounded-xl overflow-hidden border border-outline-variant/30 relative transition-transform hover:scale-[1.01] hover:shadow-lg duration-300">
+            <div class="absolute inset-0 bg-[#e5e5f7]"
+              style="background-image: linear-gradient(#d1d1d1 1.2px, transparent 1.2px), linear-gradient(90deg, #d1d1d1 1.2px, transparent 1.2px); background-size: 24px 24px;">
+            </div>
             <div class="absolute inset-0 flex items-center justify-center">
               <div class="relative">
                 <div class="w-8 h-8 bg-primary rounded-full animate-ping opacity-25 absolute -inset-1"></div>
-                <span class="material-symbols-outlined text-primary text-5xl relative z-10" style="font-variation-settings: 'FILL' 1;">location_on</span>
+                <span class="material-symbols-outlined text-primary text-5xl relative z-10"
+                  style="font-variation-settings: 'FILL' 1;">location_on</span>
               </div>
             </div>
             <div class="absolute bottom-6 left-6 right-6 bg-white p-4 rounded-lg shadow-xl">
-              <p class="font-label-md text-primary">Sede Central MARTMES</p>
-              <p class="text-label-sm text-on-surface-variant mt-1">Ubicación corporativa estratégica</p>
+              <p class="font-label-md text-primary">Oficina Matriz</p>
+              <p class="text-label-sm text-on-surface-variant mt-1">Ambato - Ecuador</p>
             </div>
-          </div>
+          </a>
         </div>
       </div>
-    </div>
-  </section>
 
-  <!-- ===== SOCIAL MEDIA BAR ===== -->
-  <section class="py-12 border-y border-outline-variant/20 bg-surface">
-    <div class="max-w-container-max mx-auto px-margin-mobile flex flex-col md:flex-row items-center justify-between gap-8 reveal">
-      <p class="font-label-md text-primary uppercase tracking-widest">Sigue nuestra trayectoria</p>
-      <div class="flex gap-4">
-        <a class="w-12 h-12 rounded-full border border-outline-variant flex items-center justify-center hover:bg-primary hover:text-on-primary transition-all duration-300" href="#">
-          <span class="material-symbols-outlined">public</span>
-        </a>
-        <a class="w-12 h-12 rounded-full border border-outline-variant flex items-center justify-center hover:bg-primary hover:text-on-primary transition-all duration-300" href="#">
-          <span class="material-symbols-outlined">diversity_3</span>
-        </a>
-        <a class="w-12 h-12 rounded-full border border-outline-variant flex items-center justify-center hover:bg-primary hover:text-on-primary transition-all duration-300" href="#">
-          <span class="material-symbols-outlined">work</span>
-        </a>
-        <a class="w-12 h-12 rounded-full border border-outline-variant flex items-center justify-center hover:bg-primary hover:text-on-primary transition-all duration-300" href="#">
-          <span class="material-symbols-outlined">video_library</span>
-        </a>
+      <!-- Redes Sociales -->
+      <div class="mt-16 pt-12 border-t border-outline-variant/20">
+        <h3 class="font-headline-sm text-headline-sm text-primary text-center mb-8">Síguenos en redes</h3>
+        <div class="flex flex-wrap justify-center gap-6">
+          <a href="https://www.instagram.com/martmesgroup" target="_blank"
+            class="flex items-center gap-2 text-primary hover:text-secondary transition-colors">
+            <span class="material-symbols-outlined">photo_camera</span> Instagram
+          </a>
+          <!-- Facebook con ícono real de Font Awesome -->
+          <a href="#" target="_blank"
+            class="flex items-center gap-2 text-primary hover:text-secondary transition-colors">
+            <i class="fab fa-facebook-f"></i> Facebook
+          </a>
+          <a href="#" target="_blank"
+            class="flex items-center gap-2 text-primary hover:text-secondary transition-colors">
+            <span class="material-symbols-outlined">work</span> LinkedIn
+          </a>
+          <a href="#" target="_blank"
+            class="flex items-center gap-2 text-primary hover:text-secondary transition-colors">
+            <span class="material-symbols-outlined">music_note</span> TikTok
+          </a>
+        </div>
       </div>
     </div>
   </section>
 
   <!-- ===== FOOTER ===== -->
   <footer class="bg-primary text-on-primary py-24">
-    <div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop grid grid-cols-1 md:grid-cols-4 gap-16">
+    <div
+      class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop grid grid-cols-1 md:grid-cols-4 gap-16">
       <div class="col-span-1 md:col-span-2">
         <div class="flex items-center gap-3 mb-8">
-          <img alt="MARTMES GROUP Logo" class="h-12 w-auto invert brightness-0" src="assets/logo/logo.png" />
+          <img alt="MARTMES GROUP Logo" class="h-10 w-auto" src="assets/logo/logo.png" />
           <span class="font-headline-sm text-headline-sm font-bold tracking-tight">MARTMES GROUP</span>
         </div>
         <p class="text-body-lg opacity-60 max-w-md mb-12">
-          Liderando la consultoría de alto impacto con un compromiso inquebrantable hacia la excelencia jurídica y el crecimiento empresarial.
+          Asesoría integral para decisiones inteligentes.
         </p>
         <p class="text-label-sm opacity-40">© 2024 MARTMES GROUP. Todos los derechos reservados.</p>
       </div>
       <div>
         <h4 class="font-label-md text-secondary uppercase tracking-widest mb-8">Navegación</h4>
         <ul class="space-y-4 opacity-70">
-          <li><a class="hover:text-secondary transition-colors" href="#">Servicios</a></li>
-          <li><a class="hover:text-secondary transition-colors" href="#">Nuestro Equipo</a></li>
-          <li><a class="hover:text-secondary transition-colors" href="#">Identidad</a></li>
-          <li><a class="hover:text-secondary transition-colors" href="#">Contacto</a></li>
+          <li><a class="hover:text-secondary transition-colors" href="#services">Servicios</a></li>
+          <li><a class="hover:text-secondary transition-colors" href="#team">Equipo</a></li>
+          <li><a class="hover:text-secondary transition-colors" href="#contact">Contacto</a></li>
         </ul>
       </div>
       <div>
         <h4 class="font-label-md text-secondary uppercase tracking-widest mb-8">Contacto</h4>
         <ul class="space-y-4 opacity-70">
-          <li>Bogotá, Colombia</li>
-          <li>info@martmesgroup.com</li>
-          <li>+57 1 234 5678</li>
-          <li>Lunes - Viernes: 8am - 6pm</li>
+          <li>Ambato, Ecuador</li>
+          <li><a href="mailto:info@martmes.com" class="hover:text-secondary">info@martmes.com</a></li>
+          <li>0997392987</li>
         </ul>
       </div>
     </div>
@@ -471,22 +727,76 @@
 
   <!-- ===== CHATBOT ===== -->
   <div class="fixed bottom-8 right-8 z-[60]">
-    <button class="w-16 h-16 bg-primary text-on-primary rounded-full shadow-2xl flex items-center justify-center hover:scale-110 transition-transform active:scale-95 border-2 border-secondary/30" id="chat-toggle">
+    <!-- Botón toggle -->
+    <button
+      class="w-16 h-16 bg-primary text-on-primary rounded-full shadow-2xl flex items-center justify-center hover:scale-110 transition-transform active:scale-95 border-2 border-secondary/30"
+      id="chat-toggle">
       <span class="material-symbols-outlined text-3xl">smart_toy</span>
     </button>
-    <div class="hidden absolute bottom-20 right-0 w-80 bg-white rounded-2xl shadow-2xl overflow-hidden border border-outline-variant/30 transition-all duration-300 translate-y-4 opacity-0" id="chat-window">
+
+    <!-- Ventana del chatbot -->
+    <div
+      class="hidden absolute bottom-20 right-0 w-96 max-w-[calc(100vw-2rem)] bg-white rounded-2xl shadow-2xl overflow-hidden border border-outline-variant/30 transition-all duration-300 translate-y-4 opacity-0"
+      id="chat-window">
+
+      <!-- Cabecera -->
       <div class="bg-primary p-4 flex items-center gap-3">
-        <div class="w-2 h-2 rounded-full bg-green-500"></div>
+        <div class="w-2 h-2 rounded-full bg-green-500 animate-pulse"></div>
         <span class="text-on-primary font-label-md">Asistente MARTMES</span>
+        <button class="ml-auto text-on-primary/60 hover:text-on-primary transition-colors" id="chat-close">
+          <span class="material-symbols-outlined text-xl">close</span>
+        </button>
       </div>
-      <div class="p-6">
-        <p class="text-body-md text-on-surface mb-4">Hola, ¿en qué podemos asesorarte hoy?</p>
-        <div class="space-y-2">
-          <button class="w-full text-left p-3 rounded-lg bg-surface hover:bg-surface-variant transition-colors text-label-md text-primary">¿Qué servicios ofrecen?</button>
-          <button class="w-full text-left p-3 rounded-lg bg-surface hover:bg-surface-variant transition-colors text-label-md text-primary">¿Dónde están ubicados?</button>
-          <button class="w-full text-left p-3 rounded-lg bg-surface hover:bg-surface-variant transition-colors text-label-md text-primary">¿Cómo puedo contactarlos?</button>
-          <button class="w-full text-left p-3 rounded-lg bg-surface hover:bg-surface-variant transition-colors text-label-md text-primary">¿Atienden empresas y personas?</button>
+
+      <!-- Área de mensajes -->
+      <div class="h-80 overflow-y-auto p-4 space-y-3 bg-surface/30" id="chat-messages">
+        <!-- Mensaje de bienvenida -->
+        <div class="flex items-start gap-2">
+          <div class="w-8 h-8 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0">
+            <span class="material-symbols-outlined text-primary text-sm">smart_toy</span>
+          </div>
+          <div class="bg-surface-container rounded-xl p-3 max-w-[85%]">
+            <p class="text-sm text-on-surface">¡Hola! Soy el asistente virtual de MARTMES GROUP. ¿En qué puedo ayudarte
+              hoy?</p>
+          </div>
         </div>
+      </div>
+
+      <!-- Botones rápidos -->
+      <div class="px-4 pb-2 flex flex-wrap gap-2" id="quick-buttons">
+        <button
+          class="quick-btn text-xs bg-surface hover:bg-surface-variant px-3 py-1.5 rounded-full border border-outline-variant/30 transition-colors text-primary">Servicios</button>
+        <button
+          class="quick-btn text-xs bg-surface hover:bg-surface-variant px-3 py-1.5 rounded-full border border-outline-variant/30 transition-colors text-primary">Dirección</button>
+        <button
+          class="quick-btn text-xs bg-surface hover:bg-surface-variant px-3 py-1.5 rounded-full border border-outline-variant/30 transition-colors text-primary">Contacto</button>
+        <button
+          class="quick-btn text-xs bg-surface hover:bg-surface-variant px-3 py-1.5 rounded-full border border-outline-variant/30 transition-colors text-primary">Equipo</button>
+        <button
+          class="quick-btn text-xs bg-surface hover:bg-surface-variant px-3 py-1.5 rounded-full border border-outline-variant/30 transition-colors text-primary">Horarios</button>
+      </div>
+
+      <!-- Input para escribir -->
+      <div class="p-3 border-t border-outline-variant/20 bg-white">
+        <form class="flex gap-2" id="chat-form">
+          <input type="text" id="chat-input" placeholder="Escribe tu pregunta..."
+            class="flex-1 px-3 py-2 rounded-full border border-outline-variant/30 focus:outline-none focus:border-secondary text-sm"
+            autocomplete="off" />
+          <button type="submit"
+            class="bg-primary text-on-primary rounded-full w-10 h-10 flex items-center justify-center hover:bg-opacity-90 transition-colors flex-shrink-0">
+            <span class="material-symbols-outlined text-sm">send</span>
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== MODAL (ZOOM) ===== -->
+  <div class="modal-overlay" id="modal-overlay">
+    <div class="modal-content" id="modal-content">
+      <button class="modal-close" id="modal-close">&times;</button>
+      <div class="modal-grid" id="modal-grid">
+        <!-- Aquí se inyectará el contenido clonado -->
       </div>
     </div>
   </div>
@@ -494,5 +804,8 @@
   <!-- ===== SCRIPTS ===== -->
   <script src="js/main.js"></script>
   <script src="js/chatbot.js"></script>
+  <script src="js/modal.js"></script>
+
 </body>
+
 </html>

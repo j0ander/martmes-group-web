@@ -43,4 +43,51 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   }
 
+
+  // ---------- TOGGLE SUAVE PARA DETALLES DE SERVICIOS (GIROS DE NEGOCIO) ----------
+  document.querySelectorAll('.servicio-detalle').forEach(function(container) {
+    const toggle = container.querySelector('.detalle-toggle');
+    const content = container.querySelector('.detalle-contenido');
+    const icon = toggle.querySelector('.material-symbols-outlined');
+
+    toggle.addEventListener('click', function() {
+      const isOpen = content.style.maxHeight !== '0px' && content.style.maxHeight !== '';
+
+      if (isOpen) {
+        // Cerrar
+        content.style.maxHeight = '0px';
+        content.style.opacity = '0';
+        icon.style.transform = 'rotate(0deg)';
+      } else {
+        // Abrir
+        content.style.maxHeight = content.scrollHeight + 'px';
+        content.style.opacity = '1';
+        icon.style.transform = 'rotate(180deg)';
+      }
+    });
+  });
+
+});
+
+
+// ============================================
+// ANIMACIÓN DE ENTRADA PARA TARJETAS DE SERVICIOS (SLIDE)
+// ============================================
+document.addEventListener('DOMContentLoaded', function() {
+  const slides = document.querySelectorAll('.slide-left, .slide-right');
+
+  const observerSlides = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('slide-visible');
+        // Opcional: dejar de observar una vez activada
+        // observerSlides.unobserve(entry.target);
+      }
+    });
+  }, {
+    threshold: 0.15,
+    rootMargin: '0px 0px -50px 0px'
+  });
+
+  slides.forEach(el => observerSlides.observe(el));
 });
