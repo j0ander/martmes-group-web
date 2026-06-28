@@ -12,7 +12,7 @@
     rel="stylesheet" />
   <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"
     rel="stylesheet" />
-  <!-- Font Awesome para el logo real de Facebook -->
+  <!-- Font Awesome -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
 
   <!-- Estilos propios -->
@@ -23,6 +23,7 @@
   <link rel="stylesheet" href="css/chatbot.css" />
   <link rel="stylesheet" href="css/responsive.css" />
   <link rel="stylesheet" href="css/modal.css" />
+
   <!-- colores personalizados -->
   <script>
     tailwind.config = {
@@ -120,21 +121,19 @@
 
 <body class="bg-background text-on-surface font-body-md overflow-x-hidden">
 
-  <!-- ===== NAVBAR (sin botón Agendar) ===== -->
+  <!-- ===== NAVBAR ===== -->
   <nav class="fixed top-0 w-full z-50 bg-surface/80 backdrop-blur-md transition-all duration-300" id="navbar">
     <div
       class="flex justify-between items-center w-full px-margin-mobile md:px-margin-desktop py-4 max-w-container-max mx-auto">
       <div class="flex items-center gap-3">
-        <img alt="MARTMES GROUP Logo" class="h-10 w-auto" src="assets/logo/logo.png" />
+        <img alt="MARTMES GROUP Logo" class="h-12 w-auto" src="assets/logo/logo-navbar1.png" />
         <span class="font-headline-md text-headline-md font-bold tracking-tight text-primary">MARTMES GROUP</span>
       </div>
-      <!-- Desktop Nav -->
       <div class="hidden md:flex items-center gap-8">
         <a class="text-on-surface font-medium hover:text-secondary transition-colors" href="#services">Servicios</a>
         <a class="text-on-surface font-medium hover:text-secondary transition-colors" href="#team">Equipo</a>
         <a class="text-on-surface font-medium hover:text-secondary transition-colors" href="#contact">Contacto</a>
       </div>
-      <!-- Mobile Menu Toggle -->
       <button class="md:hidden text-primary" id="mobile-menu-btn">
         <span class="material-symbols-outlined">menu</span>
       </button>
@@ -150,7 +149,7 @@
     <div class="relative z-20 text-center px-margin-mobile max-w-4xl mx-auto reveal active">
       <h1 class="font-display-lg text-display-lg-mobile md:text-display-lg text-on-primary mb-6">MARTMES GROUP</h1>
       <p class="font-body-lg text-body-lg text-on-primary opacity-90 mb-10 max-w-2xl mx-auto">
-        Asesoría integral para decisiones inteligentes. Elevamos el estándar de la consultoría legal y empresarial.
+        Asesoría integral para decisiones inteligentes.
       </p>
       <div class="flex flex-col md:flex-row items-center justify-center gap-4">
         <a class="w-full md:w-auto bg-secondary text-on-primary px-10 py-4 rounded-xl font-label-md hover:bg-secondary-container hover:text-on-secondary-container transition-all text-center"
@@ -229,10 +228,9 @@
     </div>
   </section>
 
-  <!-- ===== SERVICIOS (GIROS DE NEGOCIO) ===== -->
+  <!-- ===== SERVICIOS ===== -->
   <section class="py-24 md:py-40 bg-white" id="services">
     <style>
-      /* Animaciones para las tarjetas de servicios */
       .slide-left,
       .slide-right {
         opacity: 0;
@@ -258,7 +256,7 @@
       <div class="flex flex-col md:flex-row justify-between items-end mb-16 gap-8 reveal">
         <div class="max-w-2xl">
           <span class="font-label-md text-secondary uppercase tracking-[0.2em] block mb-4">Giros de Negocio</span>
-          <h2 class="font-headline-md text-headline-md text-primary">Soluciones Integrales para Cada Necesidad</h2>
+          <h2 class="font-headline-md text-headline-md text-primary">Soluciones Integrales para cada necesidad</h2>
         </div>
         <div class="text-on-surface-variant text-right hidden md:block">
           <p class="max-w-xs">Estrategia y respaldo legal para empresas, instituciones y personas.</p>
@@ -266,16 +264,13 @@
       </div>
 
       <div class="grid grid-cols-1 gap-12">
-
-        <!-- Servicio 1: Asesoría Jurídica -->
+        <!-- Servicio 1 -->
         <div
           class="slide-left group relative bg-surface-container-low rounded-xl overflow-hidden border border-outline-variant/20">
           <div class="grid grid-cols-1 md:grid-cols-2">
             <div class="p-12 flex flex-col justify-center">
               <span class="material-symbols-outlined text-secondary text-4xl mb-6">gavel</span>
               <h3 class="font-headline-md text-headline-md text-primary mb-6">Asesoría Jurídica</h3>
-
-              <!-- Botón y contenedor colapsable -->
               <div class="servicio-detalle">
                 <button class="detalle-toggle text-secondary font-label-md flex items-center gap-2 hover:underline">
                   VER DETALLES <span
@@ -331,7 +326,7 @@
           </div>
         </div>
 
-        <!-- Servicio 2: Consultoría Empresarial (entra desde derecha) -->
+        <!-- Servicio 2 -->
         <div
           class="slide-right group relative bg-surface-container-low rounded-xl overflow-hidden border border-outline-variant/20">
           <div class="grid grid-cols-1 md:grid-cols-2">
@@ -342,8 +337,6 @@
             <div class="p-12 flex flex-col justify-center order-1 md:order-2">
               <span class="material-symbols-outlined text-secondary text-4xl mb-6">insights</span>
               <h3 class="font-headline-md text-headline-md text-primary mb-6">Consultoría Empresarial</h3>
-
-              <!-- Botón y contenedor colapsable -->
               <div class="servicio-detalle">
                 <button class="detalle-toggle text-secondary font-label-md flex items-center gap-2 hover:underline">
                   VER DETALLES <span
@@ -367,7 +360,7 @@
           </div>
         </div>
 
-        <!-- Servicio 3: Gestión Inmobiliaria (entra desde izquierda) -->
+        <!-- Servicio 3 -->
         <div
           class="slide-left group relative bg-surface-container-low rounded-xl overflow-hidden border border-outline-variant/20">
           <div class="grid grid-cols-1 md:grid-cols-2">
@@ -375,8 +368,6 @@
               <span class="material-symbols-outlined text-secondary text-4xl mb-6">apartment</span>
               <h3 class="font-headline-md text-headline-md text-primary mb-6">Gestión Inmobiliaria y Proyectos
                 Especializados</h3>
-
-              <!-- Botón y contenedor colapsable -->
               <div class="servicio-detalle">
                 <button class="detalle-toggle text-secondary font-label-md flex items-center gap-2 hover:underline">
                   VER DETALLES <span
@@ -388,7 +379,7 @@
                     <div>
                       <h4 class="font-label-md text-primary">Gestión y Comercialización Inmobiliaria</h4>
                       <ul class="list-disc pl-6 space-y-1">
-                        <li>Correctaje e intermediación inmobiliaria</li>
+                        <li>Corretaje e intermediación inmobiliaria</li>
                       </ul>
                     </div>
                     <div>
@@ -430,48 +421,79 @@
             </div>
           </div>
         </div>
+
+        <!-- Servicio 4 (Nuevo) -->
+        <div
+          class="slide-right group relative bg-surface-container-low rounded-xl overflow-hidden border border-outline-variant/20">
+          <div class="grid grid-cols-1 md:grid-cols-2">
+            <div class="h-64 md:h-full order-2 md:order-1 overflow-hidden">
+              <img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+                alt="Gestión Pública" src="assets/images/servicio-publico.png" />
+            </div>
+            <div class="p-12 flex flex-col justify-center order-1 md:order-2">
+              <span class="material-symbols-outlined text-secondary text-4xl mb-6">account_balance</span>
+              <h3 class="font-headline-md text-headline-md text-primary mb-6">Consultoría en Gestión Pública y
+                Desarrollo Institucional</h3>
+              <div class="servicio-detalle">
+                <button class="detalle-toggle text-secondary font-label-md flex items-center gap-2 hover:underline">
+                  VER DETALLES <span
+                    class="material-symbols-outlined transition-transform duration-300">expand_more</span>
+                </button>
+                <div class="detalle-contenido overflow-hidden transition-all duration-500 ease-in-out"
+                  style="max-height: 0; opacity: 0;">
+                  <ul
+                    class="mt-6 space-y-2 font-body-md text-on-surface-variant border-t border-outline-variant pt-6 list-disc pl-6">
+                    <li>Diseño, seguimiento y evaluación de políticas públicas.</li>
+                    <li>Planificación estratégica institucional.</li>
+                    <li>Fortalecimiento organizacional.</li>
+                    <li>Elaboración de ordenanzas, reglamentos y normativa interna.</li>
+                    <li>Participación ciudadana y control social.</li>
+                    <li>Gestión de proyectos sociales.</li>
+                    <li>Enfoque de género, derechos humanos.</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </section>
 
-  <!-- ===== TEAM  ===== -->
+  <!-- ===== TEAM ===== -->
   <section class="py-12 md:py-24 bg-surface" id="team">
     <div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
       <div class="text-center mb-12 reveal">
         <span class="font-label-md text-secondary uppercase tracking-[0.2em] block mb-4">Liderazgo</span>
-        <h2 class="font-headline-md text-headline-md text-primary">Nuestro Equipo Directivo</h2>
+        <h2 class="font-headline-md text-headline-md text-primary">Nuestro Equipo Multidisciplinario</h2>
       </div>
       <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-
-        <!-- Miembro 1: Edison Mesías -->
+        <!-- Miembro 1 -->
         <div
           class="team-card bg-surface-container-lowest rounded-xl overflow-hidden border border-outline-variant/30 hover:border-secondary transition-all reveal">
           <div class="card-preview p-8">
             <div class="relative overflow-hidden h-64 rounded-lg mb-4">
-              <img alt="Ing. Edison Mesías, Mtr." class="w-full h-full object-cover" src="assets/team/team-1.jpg" />
+              <img alt="Ing. Edison Mesías, Mtr." class="w-full h-full object-cover object-top"
+                src="assets/team/team-1.jpeg" />
             </div>
             <h3 class="font-headline-sm text-headline-sm text-primary mb-1">Ing. Edison Mesías, Mtr.</h3>
             <p class="font-label-md text-secondary mb-3">Director de Marketing y Estrategia</p>
-            <p class="font-body-md text-on-surface-variant line-clamp-3">
-              Profesional con más de 11 años de experiencia en los sectores público y privado, desempeñando funciones
-              estratégicas en las áreas de marketing, administración y gestión empresarial.
-            </p>
+            <p class="font-body-md text-on-surface-variant line-clamp-3">Profesional con más de 11 años de experiencia
+              en los sectores público y privado, desempeñando funciones estratégicas en las áreas de marketing,
+              administración y gestión empresarial.</p>
             <button class="ver-mas mt-4 text-secondary font-label-md hover:underline flex items-center gap-1"
-              data-member="1">
-              Ver más <span class="material-symbols-outlined text-sm">expand_more</span>
-            </button>
+              data-member="1">Ver más <span class="material-symbols-outlined text-sm">expand_more</span></button>
           </div>
-          <!-- Contenido completo (oculto, se clonará para el modal) -->
           <div class="card-expanded hidden">
             <div class="expanded-data">
-              <img alt="Ing. Edison Mesías, Mtr." class="w-full h-full object-cover" src="assets/team/team-1.jpg" />
+              <img alt="Ing. Edison Mesías, Mtr." class="w-full h-full object-cover object-top"
+                src="assets/team/team-1.jpeg" />
               <div>
                 <h3 class="font-headline-sm text-headline-sm text-primary mb-1">Ing. Edison Mesías, Mtr.</h3>
                 <p class="font-label-md text-secondary mb-3">Director de Marketing y Estrategia</p>
                 <div class="font-body-md text-on-surface-variant space-y-3">
-                  <p><strong>Máster Universitario en Dirección de Marketing</strong><br />
-                    <strong>Máster en Dirección Estratégica, Especialidad en Gerencia</strong>
-                  </p>
+                  <p><strong>Máster Universitario en Dirección de Marketing</strong><br /><strong>Máster en Dirección
+                      Estratégica, Especialidad en Gerencia</strong></p>
                   <p>Profesional con más de 11 años de experiencia en los sectores público y privado, desempeñando
                     funciones estratégicas en las áreas de marketing, administración y gestión empresarial. Mi
                     experiencia me ha permitido liderar procesos, optimizar recursos y desarrollar estrategias enfocadas
@@ -484,34 +506,32 @@
           </div>
         </div>
 
-        <!-- Miembro 2: Karina Martínez -->
+        <!-- Miembro 2 -->
         <div
           class="team-card bg-surface-container-lowest rounded-xl overflow-hidden border border-outline-variant/30 hover:border-secondary transition-all reveal">
           <div class="card-preview p-8">
             <div class="relative overflow-hidden h-64 rounded-lg mb-4">
-              <img alt="Av. Karina Martínez, Mtr." class="w-full h-full object-cover" src="assets/team/team-2.jpg" />
+              <img alt="Abg. Karina Martínez Torres, Mtra." class="w-full h-full object-cover object-top"
+                src="assets/team/team-2.jpeg" />
             </div>
-            <h3 class="font-headline-sm text-headline-sm text-primary mb-1">Av. Karina Martínez, Mtr.</h3>
-            <p class="font-label-md text-secondary mb-3">Directora Legal y de Protección de Datos</p>
-            <p class="font-body-md text-on-surface-variant line-clamp-3">
-              Master en Derechos Humanos y Sistemas Internacionales de protección, Especialista en Derecho
-              Administrativo. Con amplia experiencia en el sector público y privado.
-            </p>
+            <h3 class="font-headline-sm text-headline-sm text-primary mb-1">Abg. Karina Martínez Torres, Mtra.</h3>
+            <p class="font-label-md text-secondary mb-3">Asesor legal y Consultor</p>
+            <p class="font-body-md text-on-surface-variant line-clamp-3">Master en Derechos Humanos y Sistemas
+              Internacionales de protección, Especialista en Derecho Administrativo. Con amplia experiencia en el sector
+              público y privado.</p>
             <button class="ver-mas mt-4 text-secondary font-label-md hover:underline flex items-center gap-1"
-              data-member="2">
-              Ver más <span class="material-symbols-outlined text-sm">expand_more</span>
-            </button>
+              data-member="2">Ver más <span class="material-symbols-outlined text-sm">expand_more</span></button>
           </div>
           <div class="card-expanded hidden">
             <div class="expanded-data">
-              <img alt="Av. Karina Martínez, Mtr." class="w-full h-full object-cover" src="assets/team/team-2.jpg" />
+              <img alt="Abg. Karina Martínez Torres, Mtra." class="w-full h-full object-cover object-top"
+                src="assets/team/team-2.jpeg" />
               <div>
-                <h3 class="font-headline-sm text-headline-sm text-primary mb-1">Av. Karina Martínez, Mtr.</h3>
-                <p class="font-label-md text-secondary mb-3">Directora Legal y de Protección de Datos</p>
+                <h3 class="font-headline-sm text-headline-sm text-primary mb-1">Abg. Karina Martínez Torres, Mtra.</h3>
+                <p class="font-label-md text-secondary mb-3">Asesor legal y Consultor</p>
                 <div class="font-body-md text-on-surface-variant space-y-3">
-                  <p><strong>Master en Derechos Humanos y Sistemas Internacionales de protección</strong><br />
-                    <strong>Especialista en Derecho Administrativo</strong>
-                  </p>
+                  <p><strong>Master en Derechos Humanos y Sistemas Internacionales de
+                      protección</strong><br /><strong>Especialista en Derecho Administrativo</strong></p>
                   <p>Cuenta con certificaciones en Leadership por la Universidad Internacional de Miami (MIU) y como
                     Delegada de Protección de Datos Personales. Posee amplia experiencia en el sector público y privado,
                     habiendo desempeñado cargos de alta responsabilidad como Procuradora Zonal del SRI, Coordinadora
@@ -527,30 +547,28 @@
           </div>
         </div>
 
-        <!-- Miembro 3: Pablo Acurio -->
+        <!-- Miembro 3 -->
         <div
           class="team-card bg-surface-container-lowest rounded-xl overflow-hidden border border-outline-variant/30 hover:border-secondary transition-all reveal">
           <div class="card-preview p-8">
             <div class="relative overflow-hidden h-64 rounded-lg mb-4">
-              <img alt="Av. Pablo Acurio, Mgt." class="w-full h-full object-cover" src="assets/team/team-3.jpg" />
+              <img alt="Abg. Pablo Acurio, Mgtr." class="w-full h-full object-cover object-top"
+                src="assets/team/team-3.jpeg" />
             </div>
-            <h3 class="font-headline-sm text-headline-sm text-primary mb-1">Av. Pablo Acurio, Mgt.</h3>
-            <p class="font-label-md text-secondary mb-3">Director de Litigios y Derecho Civil</p>
-            <p class="font-body-md text-on-surface-variant line-clamp-3">
-              Magíster en Derecho Civil y Procesal Civil. Especialista en diseño de estrategias litigiosas bajo el
-              COGEP.
-            </p>
+            <h3 class="font-headline-sm text-headline-sm text-primary mb-1">Abg. Pablo Acurio, Mgtr.</h3>
+            <p class="font-label-md text-secondary mb-3">Asesor en Litigios y Derecho Civil</p>
+            <p class="font-body-md text-on-surface-variant line-clamp-3">Magíster en Derecho Civil y Procesal Civil.
+              Especialista en diseño de estrategias litigiosas bajo el COGEP.</p>
             <button class="ver-mas mt-4 text-secondary font-label-md hover:underline flex items-center gap-1"
-              data-member="3">
-              Ver más <span class="material-symbols-outlined text-sm">expand_more</span>
-            </button>
+              data-member="3">Ver más <span class="material-symbols-outlined text-sm">expand_more</span></button>
           </div>
           <div class="card-expanded hidden">
             <div class="expanded-data">
-              <img alt="Av. Pablo Acurio, Mgt." class="w-full h-full object-cover" src="assets/team/team-3.jpg" />
+              <img alt="Abg. Pablo Acurio, Mgtr." class="w-full h-full object-cover object-top"
+                src="assets/team/team-3.jpeg" />
               <div>
-                <h3 class="font-headline-sm text-headline-sm text-primary mb-1">Av. Pablo Acurio, Mgt.</h3>
-                <p class="font-label-md text-secondary mb-3">Director de Litigios y Derecho Civil</p>
+                <h3 class="font-headline-sm text-headline-sm text-primary mb-1">Abg. Pablo Acurio, Mgtr.</h3>
+                <p class="font-label-md text-secondary mb-3">Asesor en Litigios y Derecho Civil</p>
                 <div class="font-body-md text-on-surface-variant space-y-3">
                   <p><strong>Magíster en Derecho Civil y Procesal Civil.</strong></p>
                   <p>Profesional de la abogacía con una sólida trayectoria en el patrocinio legal y la consultoría
@@ -565,7 +583,6 @@
             </div>
           </div>
         </div>
-
       </div>
     </div>
   </section>
@@ -624,7 +641,9 @@
                 <h4 class="font-label-md text-primary mb-1">WhatsApp</h4>
                 <p class="font-body-md text-on-surface-variant">
                   <a href="https://wa.me/593997392987" target="_blank"
-                    class="text-primary hover:text-secondary">https://wa.me/593997392987</a>
+                    class="text-primary hover:text-secondary flex items-center gap-2">
+                    <i class="fab fa-whatsapp text-lg"></i> WhatsApp
+                  </a>
                 </p>
               </div>
             </div>
@@ -637,15 +656,15 @@
                 <h4 class="font-label-md text-primary mb-1">Correo Electrónico</h4>
                 <p class="font-body-md text-on-surface-variant">
                   <a href="mailto:info@martmes.com" class="text-primary hover:text-secondary">info@martmes.com</a><br />
-                  <span class="text-sm">Facturación: <a href="mailto:facturacion@martmes.com"
-                      class="text-primary hover:text-secondary">facturacion@martmes.com</a></span>
+                <h4 class="font-label-md text-primary mb-1">Facturación</h4>
+                <a href="mailto:info@martmes.com"
+                  class="text-primary hover:text-secondary">facturacion@martmes.com</a><br />
                 </p>
               </div>
             </div>
           </div>
         </div>
         <div class="reveal">
-          <!-- Mapa clickable: ahora es un enlace a Google Maps -->
           <a href="https://maps.app.goo.gl/kczdhuBQiFv9vcXc9" target="_blank"
             class="block h-full min-h-[400px] bg-surface-container rounded-xl overflow-hidden border border-outline-variant/30 relative transition-transform hover:scale-[1.01] hover:shadow-lg duration-300">
             <div class="absolute inset-0 bg-[#e5e5f7]"
@@ -666,7 +685,6 @@
         </div>
       </div>
 
-      <!-- Redes Sociales -->
       <div class="mt-16 pt-12 border-t border-outline-variant/20">
         <h3 class="font-headline-sm text-headline-sm text-primary text-center mb-8">Síguenos en redes</h3>
         <div class="flex flex-wrap justify-center gap-6">
@@ -674,22 +692,25 @@
             class="flex items-center gap-2 text-primary hover:text-secondary transition-colors">
             <span class="material-symbols-outlined">photo_camera</span> Instagram
           </a>
-          <!-- Facebook con ícono real de Font Awesome -->
-          <a href="#" target="_blank"
+          <a href="https://www.facebook.com/profile.php?id=61590936750070" target="_blank"
             class="flex items-center gap-2 text-primary hover:text-secondary transition-colors">
             <i class="fab fa-facebook-f"></i> Facebook
           </a>
-          <a href="#" target="_blank"
+          <a href="https://www.linkedin.com/company/130564743/admin/dashboard/" target="_blank"
             class="flex items-center gap-2 text-primary hover:text-secondary transition-colors">
             <span class="material-symbols-outlined">work</span> LinkedIn
           </a>
-          <a href="#" target="_blank"
+          <a href="https://www.tiktok.com/@martmesgroup?_r=1&_t=ZS-97XqzOebIXo" target="_blank"
             class="flex items-center gap-2 text-primary hover:text-secondary transition-colors">
             <span class="material-symbols-outlined">music_note</span> TikTok
           </a>
+          <!-- NUEVO: WhatsApp -->
+          <a href="https://wa.me/593997392987" target="_blank"
+            class="flex items-center gap-2 text-primary hover:text-secondary transition-colors">
+            <i class="fab fa-whatsapp"></i> WhatsApp
+          </a>
         </div>
       </div>
-    </div>
   </section>
 
   <!-- ===== FOOTER ===== -->
@@ -698,12 +719,10 @@
       class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop grid grid-cols-1 md:grid-cols-4 gap-16">
       <div class="col-span-1 md:col-span-2">
         <div class="flex items-center gap-3 mb-8">
-          <img alt="MARTMES GROUP Logo" class="h-10 w-auto" src="assets/logo/logo.png" />
+          <img alt="MARTMES GROUP Logo" class="h-14 w-auto" src="assets/logo/logo-navbar1.png" />
           <span class="font-headline-sm text-headline-sm font-bold tracking-tight">MARTMES GROUP</span>
         </div>
-        <p class="text-body-lg opacity-60 max-w-md mb-12">
-          Asesoría integral para decisiones inteligentes.
-        </p>
+        <p class="text-body-lg opacity-60 max-w-md mb-12">Asesoría integral para decisiones inteligentes.</p>
         <p class="text-label-sm opacity-40">© 2024 MARTMES GROUP. Todos los derechos reservados.</p>
       </div>
       <div>
@@ -727,42 +746,29 @@
 
   <!-- ===== CHATBOT ===== -->
   <div class="fixed bottom-8 right-8 z-[60]">
-    <!-- Botón toggle -->
     <button
-      class="w-16 h-16 bg-primary text-on-primary rounded-full shadow-2xl flex items-center justify-center hover:scale-110 transition-transform active:scale-95 border-2 border-secondary/30"
+      class="relative group w-14 h-14 bg-primary text-on-primary rounded-full shadow-xl flex items-center justify-center hover:scale-110 transition-all duration-300 active:scale-95 border-2 border-secondary/30 hover:border-secondary/60"
       id="chat-toggle">
-      <span class="material-symbols-outlined text-3xl">smart_toy</span>
+      <span class="material-symbols-outlined text-2xl relative z-10">smart_toy</span>
+      <span class="absolute inset-0 rounded-full animate-ping bg-secondary/20"></span>
+      <span
+        class="absolute right-full mr-2 px-2 py-1 bg-primary text-on-primary text-xs rounded opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap pointer-events-none border border-secondary/30">
+        Martmes AI
+      </span>
     </button>
-
-    <!-- Ventana del chatbot -->
     <div
-      class="hidden absolute bottom-20 right-0 w-96 max-w-[calc(100vw-2rem)] bg-white rounded-2xl shadow-2xl overflow-hidden border border-outline-variant/30 transition-all duration-300 translate-y-4 opacity-0"
+      class="absolute bottom-20 right-0 w-96 max-w-[calc(100vw-2rem)] bg-white rounded-2xl shadow-2xl overflow-hidden border border-outline-variant/30"
       id="chat-window">
-
-      <!-- Cabecera -->
       <div class="bg-primary p-4 flex items-center gap-3">
         <div class="w-2 h-2 rounded-full bg-green-500 animate-pulse"></div>
-        <span class="text-on-primary font-label-md">Asistente MARTMES</span>
+        <span class="text-on-primary font-label-md">Martmes AI</span>
         <button class="ml-auto text-on-primary/60 hover:text-on-primary transition-colors" id="chat-close">
           <span class="material-symbols-outlined text-xl">close</span>
         </button>
       </div>
-
-      <!-- Área de mensajes -->
       <div class="h-80 overflow-y-auto p-4 space-y-3 bg-surface/30" id="chat-messages">
-        <!-- Mensaje de bienvenida -->
-        <div class="flex items-start gap-2">
-          <div class="w-8 h-8 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0">
-            <span class="material-symbols-outlined text-primary text-sm">smart_toy</span>
-          </div>
-          <div class="bg-surface-container rounded-xl p-3 max-w-[85%]">
-            <p class="text-sm text-on-surface">¡Hola! Soy el asistente virtual de MARTMES GROUP. ¿En qué puedo ayudarte
-              hoy?</p>
-          </div>
-        </div>
+        <!-- Los mensajes se añadirán dinámicamente desde JavaScript -->
       </div>
-
-      <!-- Botones rápidos -->
       <div class="px-4 pb-2 flex flex-wrap gap-2" id="quick-buttons">
         <button
           class="quick-btn text-xs bg-surface hover:bg-surface-variant px-3 py-1.5 rounded-full border border-outline-variant/30 transition-colors text-primary">Servicios</button>
@@ -772,11 +778,7 @@
           class="quick-btn text-xs bg-surface hover:bg-surface-variant px-3 py-1.5 rounded-full border border-outline-variant/30 transition-colors text-primary">Contacto</button>
         <button
           class="quick-btn text-xs bg-surface hover:bg-surface-variant px-3 py-1.5 rounded-full border border-outline-variant/30 transition-colors text-primary">Equipo</button>
-        <button
-          class="quick-btn text-xs bg-surface hover:bg-surface-variant px-3 py-1.5 rounded-full border border-outline-variant/30 transition-colors text-primary">Horarios</button>
       </div>
-
-      <!-- Input para escribir -->
       <div class="p-3 border-t border-outline-variant/20 bg-white">
         <form class="flex gap-2" id="chat-form">
           <input type="text" id="chat-input" placeholder="Escribe tu pregunta..."
@@ -791,13 +793,23 @@
     </div>
   </div>
 
-  <!-- ===== MODAL (ZOOM) ===== -->
+
+  <!-- ===== BOTÓN WHATSAPP FLOTANTE (COHERENTE CON CHATBOT) ===== -->
+  <a href="https://wa.me/593997392987" target="_blank" aria-label="WhatsApp"
+    class="fixed bottom-8 left-8 z-[60] bg-primary text-on-primary w-14 h-14 rounded-full shadow-xl flex items-center justify-center hover:scale-110 transition-all duration-300 border-2 border-secondary/30 hover:border-secondary/60 group">
+    <i class="fab fa-whatsapp text-2xl"></i>
+    <span
+      class="absolute left-full ml-2 px-2 py-1 bg-primary text-on-primary text-xs rounded opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap pointer-events-none border border-secondary/30">
+      WhatsApp
+    </span>
+    <span class="absolute inset-0 rounded-full animate-ping bg-secondary/20"></span>
+  </a>
+
+  <!-- ===== MODAL ===== -->
   <div class="modal-overlay" id="modal-overlay">
     <div class="modal-content" id="modal-content">
       <button class="modal-close" id="modal-close">&times;</button>
-      <div class="modal-grid" id="modal-grid">
-        <!-- Aquí se inyectará el contenido clonado -->
-      </div>
+      <div class="modal-grid" id="modal-grid"></div>
     </div>
   </div>
 

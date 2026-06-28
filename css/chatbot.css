@@ -2,6 +2,7 @@
    CHATBOT – chatbot.css
    ============================================ */
 
+/* Botón toggle */
 #chat-toggle {
   width: 4rem;
   height: 4rem;
@@ -22,17 +23,35 @@
   transform: scale(0.95);
 }
 
+/* Ventana del chatbot – oculta por defecto, visible con clase .open */
 #chat-window {
-  width: 20rem;
-  background-color: #ffffff;
-  border-radius: 1rem;
-  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
-  border: 1px solid rgba(196, 198, 207, 0.3);
-  transition: all 0.3s ease;
-  transform: translateY(1rem);
+  transition: opacity 0.4s ease, transform 0.4s ease, visibility 0.4s ease;
+  transform: translateY(20px) scale(0.95);
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+#chat-window.open {
+  transform: translateY(0) scale(1);
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+}
+
+/* Animación de entrada de cada mensaje */
+.message-bubble {
+  animation: fadeInUp 0.35s ease forwards;
   opacity: 0;
 }
-#chat-window:not(.hidden) {
-  transform: translateY(0);
-  opacity: 1;
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
